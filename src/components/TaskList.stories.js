@@ -1,18 +1,18 @@
 import React from 'react';
 
-import TaskList from './TaskList';
+import { PureTaskList } from './TaskList';
 // MRL: here we are importing the stories file og the Task component so that we can start composing complex stories (stories that render other componets inside the current component)
 import * as TaskStories from './Task.stories';
 
 export default {
-    component: TaskList,
+    component: PureTaskList,
     title: 'TaskList',
     // MRL: Use the 'decorators' key to wrap the rendered story in HTML to support display in Storybook
     // MRL: Here we are adding a div with some padding around each story (test-case / rendered element in storybook context)
     decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
 };
 
-const Template = args => <TaskList {...args} />;
+const Template = args => <PureTaskList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
