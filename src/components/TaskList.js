@@ -58,7 +58,7 @@ export default function TaskList({ loading, tasks, onPinTask, onArchiveTask }) {
 }
 
 // MRL: Specify the "shape" of the expected date od this component, either using propTypes (as below) or by using TypeScript instead of Vanilla JS
-TaskListStories.propTypes = {
+TaskList.propTypes = {
     /** Composition of the task */
     task: PropTypes.shape({
         /** Checks if the list is in loading state */
